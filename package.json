@@ -13,9 +13,9 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
-        "test": "npx gscan .",
-        "pretest": "npm run build"
+        "zip": "pnpm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "test": "pnpm exec gscan .",
+        "pretest": "pnpm run build"
     },
     "author": {
         "name": "Ghost Foundation",
@@ -82,5 +82,6 @@
             }
         }
     },
-    "type": "module"
+    "type": "module",
+    "packageManager": "pnpm@10.21.0"
 }
